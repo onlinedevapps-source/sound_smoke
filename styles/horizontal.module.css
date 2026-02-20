@@ -1,0 +1,144 @@
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.track {
+    display: flex;
+    width: 400vw;
+    height: 100%;
+    align-items: stretch;
+}
+
+.section {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+}
+
+.content {
+    width: 100%;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-align: left !important;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #fff;
+    opacity: 0.8;
+    max-width: 500px;
+    line-height: 1.4;
+    text-align: left !important;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.gridItem {
+    border-top: 2px solid rgba(255, 255, 255, 0.25);
+    padding-top: 1rem;
+}
+
+.gridItem h3 {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.contactInfo {
+    margin-top: 4rem;
+}
+
+.contactLink {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    transition: opacity 0.2s;
+    word-break: break-all;
+}
+
+.contactLink:hover {
+    opacity: 0.6;
+}
+
+/* ── Mobile Refinements ──────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .section {
+        padding: 0 6% !important;
+        width: 100vw !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+    }
+
+    .content {
+        max-width: 100% !important;
+    }
+
+    .title {
+        font-size: clamp(2rem, 8vw, 3rem) !important;
+        margin-bottom: 1.5rem !important;
+        line-height: 1.1;
+    }
+
+    .subtitle {
+        font-size: 1.1rem !important;
+        max-width: 100% !important;
+    }
+
+    .grid {
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        gap: 2rem !important;
+        margin-top: 2rem !important;
+    }
+
+    .gridItem {
+        width: 100% !important;
+        padding-bottom: 1rem;
+    }
+
+    .gridItem p {
+        font-size: 1rem !important;
+        max-width: 100% !important;
+        line-height: 1.5;
+    }
+
+    .contactLink {
+        font-size: 1.25rem !important;
+        /* Smaller text to prevent overflow */
+        word-break: break-all !important;
+    }
+
+    .contactInfo {
+        margin-top: 2.5rem !important;
+    }
+}
